@@ -1,0 +1,12 @@
+
+concat():-
+
+The Java String concat() method concatenates one string to the end of another string. This method returns a string with the value of the string passed into the method, appended to the end of the string. Consider the below illustration
+ex:- syntex
+public String concat(String anostr)  
+
+String+=:-
+
+Since String is immutable in java, when you do a +, += or concat(String), a new String is generated. The bigger the String gets the longer it takes - there is more to copy and more garbage is produced.
+Today's java compilers optimizes your string concatenation to make it optimal, e.g.
+System.out.println("x:"+x+" y:"+y);
