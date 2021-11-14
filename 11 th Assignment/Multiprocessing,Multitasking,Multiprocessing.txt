@@ -1,0 +1,18 @@
+Diff. between multitasking, multithreading and multi-processing:
+
+Multitasking:
+Multitasking is when a CPU is provided to execute multiple tasks at a time.
+ Multitasking involves often CPU switching between the tasks, so that users can collaborate with each program together. Unlike multithreading, In multitasking, the processes share separate memory and resources. 
+As multitasking involves CPU switching between the tasks rapidly, So the little time is needed in order to switch from the one user to next.
+
+Multithreading:
+Multithreading is a system in which many threads are created from a process through which the computer power is increased. 
+In multithreading, CPU is provided in order to execute many threads from a process at a time, and in multithreading, process creation is performed according to cost. 
+Unlike multitasking, multithreading provides the same memory and resources to the processes for execution.
+
+Multiprocessing in Java 
+Multiprocessing in Java is purely based on the number of processors available on the host computer. 
+Every process initiated by the user is sent to the CPU (processor). 
+It loads the registers on the CPU with the data related to the assigned process.
+To perform multiprocessing in Java, the user needs one processor. Therefore, when the user requests the simultaneous execution of the second process, the alternate CPU core gets triggered and executes the process.
+

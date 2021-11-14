@@ -1,0 +1,34 @@
+Java Thread start() method:
+
+The start() method of thread class is used to begin the execution of thread. The result of this method is two threads that are running concurrently: the current thread (which returns from the call to the start method) and the other thread (which executes its run method).
+The start() method internally calls the run() method of Runnable interface to execute the code specified in the run() method in a separate thread.
+
+The start thread performs the following tasks:
+
+It stats a new thread
+The thread moves from New State to Runnable state.
+When the thread gets a chance to execute, its target run() method will run.
+
+Syntax:
+public void start()  
+
+Return value
+It does not return any value.
+  
+Exception
+IllegalThreadStateException - This exception throws if the start() method is called more than one times.
+
+For ex.
+public class StartExp1 extends Thread  
+{    
+    public void run()  
+    {    
+        System.out.println("Thread is running...");    
+    }    
+    public static void main(String args[])  
+    {    
+        StartExp1 t1=new StartExp1();    
+        // this will call run() method  
+        t1.start();    
+    }    
+}    

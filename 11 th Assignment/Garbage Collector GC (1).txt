@@ -1,0 +1,16 @@
+Garbage Colleector (GC) in Java.
+
+Garbage Collection is the process of reclaiming the runtime unused memory by destroying the unused objects.
+In languages like C and C++, the programmer is responsible for both the creation and destruction of objects. Sometimes, the programmer may forget to destroy useless objects, and the memory allocated to them is not released.
+ The used memory of the system keeps on growing and eventually there is no memory left in the system to allocate. Such applications suffer from "memory leaks".
+After a certain point, sufficient memory is not available for creation of new objects, and the entire program terminates abnormally due to OutOfMemoryErrors.
+
+Java Garbage Collection is the process by which Java programs perform automatic memory management. 
+Java programs compile into bytecode that can be run on a Java Virtual Machine (JVM).
+When Java programs run on the JVM, objects are created on the heap, which is a portion of memory dedicated to the program.
+Important Points About Garbage Collector
+It is controlled by a thread known as Garbage Collector.
+Java provides two methods System.gc() and Runtime.gc() that sends request to the JVM for garbage collection. Remember, it is not necessary that garbage collection will happen.
+Java programmer are free from memory management. We cannot force the garbage collector to collect the garbage, it depends on the JVM.
+If the Heap Memory is full, the JVM will not allow to create a new object and shows an error java.lang.OutOfMemoryError.
+When garbage collector removes object from the memory, first, the garbage collector thread calls the finalize() method of that object and then remove.

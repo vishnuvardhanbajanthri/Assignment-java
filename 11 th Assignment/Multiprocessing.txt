@@ -1,0 +1,10 @@
+*****Multiprocessing in Java:*****
+ 
+Multiprocessing in Java is purely based on the number of processors available on the host computer. Every process initiated by the user is sent to the CPU (processor). 
+It loads the registers on the CPU with the data related to the assigned process.
+To perform multiprocessing in Java, the user needs one processor.
+ Therefore, when the user requests the simultaneous execution of the second process, the alternate CPU core gets triggered and executes the process.
+
+An operating system executes multiple processes in a manner similar to that for multi-threading, except that each process stack refers to a different program in memory rather than code within a single program. 
+The Java Virtual Machine (JVM), of course, controls the threading within the Java programs, just as the machine OS controls multiple processes.
+In some JVM designs, threads can be assigned to native kernel processes in the OS. Furthermore, for operating systems such as Solaris and Windows NT that can control multiple processors, the threads can actually run on different processors and thus provide true parallel processing performance.
